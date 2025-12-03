@@ -4,6 +4,17 @@ Note: Only use **NEW:** for entirely new prompt files, NOT for new additions/sec
 
 ### Claude Code System Prompts Changelog
 
+# [2.0.56](https://github.com/Piebald-AI/claude-code-system-prompts/commit/20a222010a3c96dc37d9ae323cd40fae75251f9a)
+
+- Reinforced note about using the current year in the WebSearch tool description
+- Added a note to the main system prompt instructing Claude to never include time estimates when presenting options or plans.
+- Strengthened and elaborated "plan mode is active" system reminder
+- Encouraged the Explore subagent to be more tool-call-efficient and token-efficient
+- Added an instruction to _"Read any files provided to you in the initial prompt"_ to the Plan subagent
+- Changed the theme of the prompt suggestion generator's prompt from _"predict what the user will type next"_ to _"suggest what Claude could help with"_
+- Stopped directing the user to open a GH an on the Claude Code repo via `/feedback` when the `claude-code-guide` subagent is at a loss
+- Removed the old plan mode's system reminder
+
 # [2.0.55](https://github.com/Piebald-AI/claude-code-system-prompts/commit/5c2f24217280a6c0a0b0ae5f80ba7f195e874ed0)
 
 _+121 tokens_
