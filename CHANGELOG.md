@@ -4,6 +4,17 @@ Note: Only use **NEW:** for entirely new prompt files, NOT for new additions/sec
 
 ### Claude Code System Prompts Changelog
 
+# [2.0.71](https://github.com/Piebald-AI/claude-code-system-prompts/commit/1be49c8)
+
+_+948 tokens_
+
+- **NEW:** System Prompt: Claude in Chrome browser automation - instructions for using Claude in Chrome browser automation tools effectively
+- **NEW:** Tool Description: Computer - main description for the Chrome browser computer automation tool
+- **NEW:** Tool Description: Computer action parameter - description for the computer action parameter used with the Computer tool
+- Tool Description: Bash (Git commit and PR creation instructions) - expanded amend safety rules with explicit conditions: (1) user requested OR hook auto-modified files, (2) HEAD was created by you, (3) not yet pushed; added critical warnings for rejected hooks and already-pushed commits; clarified hook failure vs auto-modification handling
+- **REMOVED:** Agent Prompt: Prompt suggestion generator
+- **REMOVED:** System Reminder: MCP CLI large output
+
 # [2.0.70](https://github.com/Piebald-AI/claude-code-system-prompts/commit/d1f3263)
 
 _+2283 tokens_
