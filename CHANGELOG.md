@@ -4,6 +4,13 @@ Note: Only use **NEW:** for entirely new prompt files, NOT for new additions/sec
 
 ### Claude Code System Prompts Changelog
 
+# [2.1.8](https://github.com/Piebald-AI/claude-code-system-prompts/commit/168ab21)
+
+_-101 tokens_
+
+- System Reminder: Plan mode is active - extracted inline plan file info section into separate, new section; converted hardcoded phase numbers (2-5) to dynamic variables for conditional user interview phase; replaced user interview guidance with a new phase explicitly for user interview
+- Tool Description: WebSearch - updated year example to use the current year instead of hardcoded year value
+
 # [2.1.7](https://github.com/Piebald-AI/claude-code-system-prompts/commit/3772a02)
 
 _+74 tokens_
