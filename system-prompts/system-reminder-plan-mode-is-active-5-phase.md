@@ -1,7 +1,7 @@
 <!--
 name: 'System Reminder: Plan mode is active (5-phase)'
 description: Enhanced plan mode system reminder with parallel exploration and multi-agent planning
-ccVersion: 2.1.33
+ccVersion: 2.1.41
 variables:
   - SYSTEM_REMINDER
   - EDIT_TOOL
@@ -9,7 +9,11 @@ variables:
   - EXPLORE_SUBAGENT
   - PLAN_V2_EXPLORE_AGENT_COUNT
   - PLAN_AGENT
-  - AGENT_COUNT_IS_GREATER_THAN_ZERO
+  - GLOB_TOOL_NAME
+  - GREP_TOOL_NAME
+  - READ_TOOL_NAME
+  - PLAN_SUBAGENT
+  - PLAN_V2_PLAN_AGENT_COUNT
   - ASK_USER_QUESTION_TOOL_NAME
   - EXIT_PLAN_MODE_TOOL
 -->
@@ -22,27 +26,27 @@ You should build your plan incrementally by writing to or editing this file. NOT
 ## Plan Workflow
 
 ### Phase 1: Initial Understanding
-Goal: Gain a comprehensive understanding of the user's request by reading through code and asking them questions. Critical: In this phase you should only use the ${EXPLORE_SUBAGENT.agentType} subagent type.
+Goal: Gain a comprehensive understanding of the user's request by reading through code and asking them questions.${EXPLORE_SUBAGENT()!=="disabled"?` Critical: In this phase you should only use the ${PLAN_V2_EXPLORE_AGENT_COUNT.agentType} subagent type.`:""}
 
 1. Focus on understanding the user's request and the code associated with their request. Actively search for existing functions, utilities, and patterns that can be reused — avoid proposing new code when suitable implementations already exist.
 
-2. **Launch up to ${PLAN_V2_EXPLORE_AGENT_COUNT} ${EXPLORE_SUBAGENT.agentType} agents IN PARALLEL** (single message, multiple tool calls) to efficiently explore the codebase.
+${EXPLORE_SUBAGENT()!=="disabled"?`2. **Launch up to ${PLAN_AGENT} ${PLAN_V2_EXPLORE_AGENT_COUNT.agentType} agents IN PARALLEL** (single message, multiple tool calls) to efficiently explore the codebase.
    - Use 1 agent when the task is isolated to known files, the user provided specific file paths, or you're making a small targeted change.
    - Use multiple agents when: the scope is uncertain, multiple areas of the codebase are involved, or you need to understand existing patterns before planning.
-   - Quality over quantity - ${PLAN_V2_EXPLORE_AGENT_COUNT} agents maximum, but you should try to use the minimum number of agents necessary (usually just 1)
-   - If using multiple agents: Provide each agent with a specific search focus or area to explore. Example: One agent searches for existing implementations, another explores related components, a third investigating testing patterns
+   - Quality over quantity - ${PLAN_AGENT} agents maximum, but you should try to use the minimum number of agents necessary (usually just 1)
+   - If using multiple agents: Provide each agent with a specific search focus or area to explore. Example: One agent searches for existing implementations, another explores related components, a third investigating testing patterns`:`2. Use ${GLOB_TOOL_NAME}, ${GREP_TOOL_NAME}, and ${READ_TOOL_NAME} directly to explore the codebase and understand relevant code.`}
 
 ### Phase 2: Design
 Goal: Design an implementation approach.
 
-Launch ${PLAN_AGENT.agentType} agent(s) to design the implementation based on the user's intent and your exploration results from Phase 1.
+Launch ${PLAN_SUBAGENT.agentType} agent(s) to design the implementation based on the user's intent and your exploration results from Phase 1.
 
-You can launch up to ${AGENT_COUNT_IS_GREATER_THAN_ZERO} agent(s) in parallel.
+You can launch up to ${PLAN_V2_PLAN_AGENT_COUNT} agent(s) in parallel.
 
 **Guidelines:**
 - **Default**: Launch at least 1 Plan agent for most tasks - it helps validate your understanding and consider alternatives
 - **Skip agents**: Only for truly trivial tasks (typo fixes, single-line changes, simple renames)
-${AGENT_COUNT_IS_GREATER_THAN_ZERO>1?`- **Multiple agents**: Use up to ${AGENT_COUNT_IS_GREATER_THAN_ZERO} agents for complex tasks that benefit from different perspectives
+${PLAN_V2_PLAN_AGENT_COUNT>1?`- **Multiple agents**: Use up to ${PLAN_V2_PLAN_AGENT_COUNT} agents for complex tasks that benefit from different perspectives
 
 Examples of when to use multiple agents:
 - The task touches multiple parts of the codebase

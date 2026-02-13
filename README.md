@@ -34,7 +34,7 @@ Download it and try it out for free!  **https://piebald.ai/**
 > [!important]
 > **NEW (January 23, 2026): We've added all of Claude Code's ~40 system reminders to this list&mdash;see [System Reminders](#system-reminders).**
 
-This repository contains an up-to-date list of all Claude Code's various system prompts and their associated token counts as of **[Claude Code v2.1.40](https://www.npmjs.com/package/@anthropic-ai/claude-code/v/2.1.40) (February 11th, 2026).**  It also contains a [**CHANGELOG.md**](./CHANGELOG.md) for the system prompts across 96 versions since v2.0.14.  From the team behind [<img src="https://github.com/Piebald-AI/piebald/raw/main/assets/logo.svg" width="15"> **Piebald.**](https://piebald.ai/)
+This repository contains an up-to-date list of all Claude Code's various system prompts and their associated token counts as of **[Claude Code v2.1.41](https://www.npmjs.com/package/@anthropic-ai/claude-code/v/2.1.41) (February 12th, 2026).**  It also contains a [**CHANGELOG.md**](./CHANGELOG.md) for the system prompts across 97 versions since v2.0.14.  From the team behind [<img src="https://github.com/Piebald-AI/piebald/raw/main/assets/logo.svg" width="15"> **Piebald.**](https://piebald.ai/)
 
 **This repository is updated within minutes of each Claude Code release.  See the [changelog](./CHANGELOG.md), and follow [@PiebaldAI](https://x.com/PiebaldAI) on X for a summary of the system prompt changes in each release.**
 
@@ -84,7 +84,7 @@ Sub-agents and utilities.
 
 - [Agent Prompt: Agent creation architect](./system-prompts/agent-prompt-agent-creation-architect.md) (**1110** tks) - System prompt for creating custom AI agents with detailed specifications.
 - [Agent Prompt: CLAUDE.md creation](./system-prompts/agent-prompt-claudemd-creation.md) (**384** tks) - System prompt for analyzing codebases and creating CLAUDE.md documentation files.
-- [Agent Prompt: Status line setup](./system-prompts/agent-prompt-status-line-setup.md) (**1460** tks) - System prompt for the statusline-setup agent that configures status line display.
+- [Agent Prompt: Status line setup](./system-prompts/agent-prompt-status-line-setup.md) (**1482** tks) - System prompt for the statusline-setup agent that configures status line display.
 
 ### Slash commands
 
@@ -132,6 +132,7 @@ Parts of the main system prompt.
 - [System Prompt: Censoring assistance with malicious activities](./system-prompts/system-prompt-censoring-assistance-with-malicious-activities.md) (**98** tks) - Guidelines for assisting with authorized security testing, defensive security, CTF challenges, and educational contexts while censoring requests for malicious activities.
 - [System Prompt: Chrome browser MCP tools](./system-prompts/system-prompt-chrome-browser-mcp-tools.md) (**156** tks) - Instructions for loading Chrome browser MCP tools via MCPSearch before use.
 - [System Prompt: Claude in Chrome browser automation](./system-prompts/system-prompt-claude-in-chrome-browser-automation.md) (**759** tks) - Instructions for using Claude in Chrome browser automation tools effectively.
+- [System Prompt: Conditional delegate codebase exploration](./system-prompts/system-prompt-conditional-delegate-codebase-exploration.md) (**249** tks) - Instructions for when to use the Explore subagent versus calling tools directly..
 - [System Prompt: Context compaction summary](./system-prompts/system-prompt-context-compaction-summary.md) (**278** tks) - Prompt used for context compaction summary (for the SDK).
 - [System Prompt: Doing tasks](./system-prompts/system-prompt-doing-tasks.md) (**445** tks) - Instructions for performing software engineering tasks.
 - [System Prompt: Executing actions with care](./system-prompts/system-prompt-executing-actions-with-care.md) (**541** tks) - Instructions for executing actions carefully..
@@ -147,14 +148,14 @@ Parts of the main system prompt.
 - [System Prompt: MCP CLI](./system-prompts/system-prompt-mcp-cli.md) (**1333** tks) - Instructions for using mcp-cli to interact with Model Context Protocol servers.
 - [System Prompt: Parallel tool call note (part of "Tool usage policy")](./system-prompts/system-prompt-parallel-tool-call-note-part-of-tool-usage-policy.md) (**102** tks) - System prompt for telling Claude to using parallel tool calls.
 - [System Prompt: Scratchpad directory](./system-prompts/system-prompt-scratchpad-directory.md) (**170** tks) - Instructions for using a dedicated scratchpad directory for temporary files.
-- [System Prompt: Skillify Current Session](./system-prompts/system-prompt-skillify-current-session.md) (**1750** tks) - System prompt for converting the current session in to a skill..
+- [System Prompt: Skillify Current Session](./system-prompts/system-prompt-skillify-current-session.md) (**1882** tks) - System prompt for converting the current session in to a skill..
 - [System Prompt: Task management](./system-prompts/system-prompt-task-management.md) (**565** tks) - Instructions for using task management tools.
 - [System Prompt: Teammate Communication](./system-prompts/system-prompt-teammate-communication.md) (**127** tks) - System prompt for teammate communication in swarm.
 - [System Prompt: Tone and style](./system-prompts/system-prompt-tone-and-style.md) (**500** tks) - Guidelines for communication tone and response style.
 - [System Prompt: Tool Use Summary Generation](./system-prompts/system-prompt-tool-use-summary-generation.md) (**171** tks) - Prompt for generating summaries of tool usage.
 - [System Prompt: Tool execution denied](./system-prompts/system-prompt-tool-execution-denied.md) (**144** tks) - System prompt for when tool execution is denied.
 - [System Prompt: Tool permission mode](./system-prompts/system-prompt-tool-permission-mode.md) (**151** tks) - Guidance on tool permission modes and handling denied tool calls.
-- [System Prompt: Tool usage policy](./system-prompts/system-prompt-tool-usage-policy.md) (**564** tks) - Policies and guidelines for tool usage.
+- [System Prompt: Tool usage policy](./system-prompts/system-prompt-tool-usage-policy.md) (**352** tks) - Policies and guidelines for tool usage.
 
 ### System Reminders
 
@@ -187,7 +188,7 @@ Text for large system reminders.
 - [System Reminder: Output style active](./system-prompts/system-reminder-output-style-active.md) (**32** tks) - Notification that an output style is active.
 - [System Reminder: Output token limit exceeded](./system-prompts/system-reminder-output-token-limit-exceeded.md) (**35** tks) - Warning when response exceeds output token limit.
 - [System Reminder: Plan file reference](./system-prompts/system-reminder-plan-file-reference.md) (**62** tks) - Reference to an existing plan file.
-- [System Reminder: Plan mode is active (5-phase)](./system-prompts/system-reminder-plan-mode-is-active-5-phase.md) (**1429** tks) - Enhanced plan mode system reminder with parallel exploration and multi-agent planning.
+- [System Reminder: Plan mode is active (5-phase)](./system-prompts/system-reminder-plan-mode-is-active-5-phase.md) (**1500** tks) - Enhanced plan mode system reminder with parallel exploration and multi-agent planning.
 - [System Reminder: Plan mode is active (iterative)](./system-prompts/system-reminder-plan-mode-is-active-iterative.md) (**797** tks) - Iterative plan mode system reminder for main agent with user interviewing workflow.
 - [System Reminder: Plan mode is active (subagent)](./system-prompts/system-reminder-plan-mode-is-active-subagent.md) (**310** tks) - Simplified plan mode system reminder for sub agents.
 - [System Reminder: Plan mode re-entry](./system-prompts/system-reminder-plan-mode-re-entry.md) (**236** tks) - System reminder sent when the user enters Plan mode after having previously exited it either via shift+tab or by approving Claude's plan..
