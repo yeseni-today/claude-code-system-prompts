@@ -4,6 +4,14 @@ Note: Only use **NEW:** for entirely new prompt files, NOT for new additions/sec
 
 ### Claude Code System Prompts Changelog
 
+#### [2.1.48](https://github.com/Piebald-AI/claude-code-system-prompts/commit/0d57836)
+
+_-1,082 tokens_
+
+- **NEW:** Tool Description: EnterWorktree - Tool description for the EnterWorktree tool (237 tks).
+- **REMOVED:** System Prompt: MCP CLI - Removed instructions for using mcp-cli to interact with Model Context Protocol servers (1333 tks).
+- Tool Description: Task - Simplified background agent output-file guidance; removed `BASH_TOOL` variable and `tail` instructions; added new "Foreground vs background" bullet explaining when to use each mode (1214 → 1228 tks).
+
 #### [2.1.47](https://github.com/Piebald-AI/claude-code-system-prompts/commit/f58cba9)
 
 _+34,752 tokens_
