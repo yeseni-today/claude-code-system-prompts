@@ -34,7 +34,7 @@ Download it and try it out for free!  **https://piebald.ai/**
 > [!important]
 > **NEW (January 23, 2026): We've added all of Claude Code's ~40 system reminders to this list&mdash;see [System Reminders](#system-reminders).**
 
-This repository contains an up-to-date list of all Claude Code's various system prompts and their associated token counts as of **[Claude Code v2.1.47](https://www.npmjs.com/package/@anthropic-ai/claude-code/v/2.1.47) (February 18th, 2026).**  It also contains a [**CHANGELOG.md**](./CHANGELOG.md) for the system prompts across 101 versions since v2.0.14.  From the team behind [<img src="https://github.com/Piebald-AI/piebald/raw/main/assets/logo.svg" width="15"> **Piebald.**](https://piebald.ai/)
+This repository contains an up-to-date list of all Claude Code's various system prompts and their associated token counts as of **[Claude Code v2.1.48](https://www.npmjs.com/package/@anthropic-ai/claude-code/v/2.1.48) (February 19th, 2026).**  It also contains a [**CHANGELOG.md**](./CHANGELOG.md) for the system prompts across 102 versions since v2.0.14.  From the team behind [<img src="https://github.com/Piebald-AI/piebald/raw/main/assets/logo.svg" width="15"> **Piebald.**](https://piebald.ai/)
 
 **This repository is updated within minutes of each Claude Code release.  See the [changelog](./CHANGELOG.md), and follow [@PiebaldAI](https://x.com/PiebaldAI) on X for a summary of the system prompt changes in each release.**
 
@@ -164,7 +164,6 @@ Parts of the main system prompt.
 - [System Prompt: Insights suggestions](./system-prompts/system-prompt-insights-suggestions.md) (**748** tks) - Generates actionable suggestions including CLAUDE.md additions, features to try, and usage patterns.
 - [System Prompt: Learning mode (insights)](./system-prompts/system-prompt-learning-mode-insights.md) (**142** tks) - Instructions for providing educational insights when learning mode is active.
 - [System Prompt: Learning mode](./system-prompts/system-prompt-learning-mode.md) (**1042** tks) - Main system prompt for learning mode with human collaboration instructions.
-- [System Prompt: MCP CLI](./system-prompts/system-prompt-mcp-cli.md) (**1333** tks) - Instructions for using mcp-cli to interact with Model Context Protocol servers.
 - [System Prompt: Option previewer](./system-prompts/system-prompt-option-previewer.md) (**129** tks) - System prompt for previewing UI options in a side-by-side layout.
 - [System Prompt: Parallel tool call note (part of "Tool usage policy")](./system-prompts/system-prompt-parallel-tool-call-note-part-of-tool-usage-policy.md) (**102** tks) - System prompt for telling Claude to using parallel tool calls.
 - [System Prompt: Scratchpad directory](./system-prompts/system-prompt-scratchpad-directory.md) (**170** tks) - Instructions for using a dedicated scratchpad directory for temporary files.
@@ -229,6 +228,7 @@ Text for large system reminders.
 - [Tool Description: Computer](./system-prompts/tool-description-computer.md) (**161** tks) - Main description for the Chrome browser computer automation tool.
 - [Tool Description: Edit](./system-prompts/tool-description-edit.md) (**246** tks) - Tool for performing exact string replacements in files.
 - [Tool Description: EnterPlanMode](./system-prompts/tool-description-enterplanmode.md) (**878** tks) - Tool description for entering plan mode to explore and design implementation approaches.
+- [Tool Description: EnterWorktree](./system-prompts/tool-description-enterworktree.md) (**237** tks) - Tool description for the EnterWorktree tool..
 - [Tool Description: ExitPlanMode](./system-prompts/tool-description-exitplanmode.md) (**417** tks) - Description for the ExitPlanMode tool, which presents a plan dialog for the user to approve.
 - [Tool Description: Glob](./system-prompts/tool-description-glob.md) (**122** tks) - Tool description for file pattern matching and searching by name.
 - [Tool Description: Grep](./system-prompts/tool-description-grep.md) (**300** tks) - Tool description for content search using ripgrep.
@@ -239,7 +239,7 @@ Text for large system reminders.
 - [Tool Description: Skill](./system-prompts/tool-description-skill.md) (**326** tks) - Tool description for executing skills in the main conversation.
 - [Tool Description: Sleep](./system-prompts/tool-description-sleep.md) (**154** tks) - Tool for waiting/sleeping with early wake capability on user input.
 - [Tool Description: TaskCreate](./system-prompts/tool-description-taskcreate.md) (**558** tks) - Tool description for TaskCreate tool.
-- [Tool Description: Task](./system-prompts/tool-description-task.md) (**1214** tks) - Tool description for launching specialized sub-agents to handle complex tasks.
+- [Tool Description: Task](./system-prompts/tool-description-task.md) (**1228** tks) - Tool description for launching specialized sub-agents to handle complex tasks.
 - [Tool Description: TeamDelete](./system-prompts/tool-description-teamdelete.md) (**154** tks) - Tool description for the TeamDelete tool.
 - [Tool Description: TeammateTool](./system-prompts/tool-description-teammatetool.md) (**1642** tks) - Tool for managing teams and coordinating teammates in a swarm.
 - [Tool Description: TodoWrite](./system-prompts/tool-description-todowrite.md) (**2167** tks) - Tool description for creating and managing task lists.
